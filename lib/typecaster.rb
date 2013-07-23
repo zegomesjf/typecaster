@@ -22,19 +22,19 @@ module Typecaster
     end
 
     def attributes
-      @attributes ||= Hash.new
+      @@attributes ||= Hash.new
     end
 
     def attributes_options
-      @attributes_options ||= Hash.new
+      @@attributes_options ||= Hash.new
     end
 
     def output_separator(separator)
-      @output_separator = separator
+      @@output_separator = separator
     end
 
     def options
-      @options ||= Hash.new
+      @@options ||= Hash.new
     end
 
     def parse(text)
@@ -56,7 +56,7 @@ module Typecaster
     end
 
     def separator
-      @output_separator ||= ""
+      @@output_separator ||= ""
     end
 
     def with_options(options, &block)
